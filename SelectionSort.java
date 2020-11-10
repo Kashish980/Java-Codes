@@ -1,5 +1,5 @@
 // Java program for implementation of Selection Sort 
-class SelectionSort 
+class SelectionSortExample
 { 
 	void sort(int arr[]) 
 	{ 
@@ -10,21 +10,21 @@ class SelectionSort
 		for (int i = 0; i < n-1; i++) //i<n-1 because we have to run the loop till last index of array that is length-1 of the array
 		{ 
 			// Find the minimum element in unsorted array 
-			int min_idx = i; 
+			int min_id = i; 
 			for (int j = i+1; j < n; j++) //i+1 because we have to comare with left over indexes and writing j=i is like comparing 4 with 4 and finding the greater
-				if (arr[j] < arr[min_idx]) 
-					min_idx = j; 
+				if (arr[j] < arr[min_id]) 
+					min_id = j; 
 
 			// Swap the found minimum element with the first 
 			// element 
-			int temp = arr[min_idx]; 
-			arr[min_idx] = arr[i]; 
+			int temp = arr[min_id]; 
+			arr[min_id] = arr[i]; 
 			arr[i] = temp; 
 		} 
 	} 
 
 	// Prints the array 
-	void printArray(int arr[]) 
+	void printsortedArray(int arr[]) 
 	{ 
 		int n = arr.length; 
 		for (int i=0; i<n; ++i) 
@@ -35,11 +35,10 @@ class SelectionSort
 	// Driver code to test above 
 	public static void main(String args[]) 
 	{ 
-		SelectionSort ob = new SelectionSort(); 
+		SelectionSortExample obj = new SelectionSortExample(); 
 		int arr[] = {4,25,2,12,11}; 
-		ob.sort(arr); 
+		obj.sort(arr); 
 		System.out.println("Sorted array"); 
-		ob.printArray(arr); 
+		obj.printsortedArray(arr); 
 	} 
 } 
-/* This code is contributed by Rajat Mishra*/
